@@ -28,6 +28,11 @@ mod my_module {
 
     // TODO: Complete the function as described above.
     // pub fn transformer(input: ???) -> ??? { ??? }
+    pub fn transformer(input:Command) -> {
+        match  {
+            Uppercase =>
+        }
+    }
 }
 
 fn main() {
