@@ -3,10 +3,7 @@
 // wait until all the spawned threads have finished and should collect their
 // return values into a vector.
 
-use std::{
-    thread,
-    time::{Duration, Instant},
-};
+use std::{thread, time::{Duration, Instant}};
 
 fn main() {
     let mut handles = Vec::new();
@@ -19,10 +16,9 @@ fn main() {
         });
         handles.push(handle);
     }
-
-    let mut results = Vec::new();
+    let mut results :Vec<u128> = Vec::new();
     for handle in handles {
-        // TODO: Collect the results of all threads into the `results` vector.
+        results.push(handle.join().unwrap());
         // Use the `JoinHandle` struct which is returned by `thread::spawn`.
     }
 
